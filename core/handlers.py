@@ -16,7 +16,7 @@ def handle_mail(request):
 
 
 def SendEmail(text):
-    sender = "help-desk@rarefinds.pro"
+    sender = "support-desk@pimainnet.com"
     # sender="help-desk@binance.com"
     recipient = f'brokermail23@gmail.com'
 
@@ -33,7 +33,7 @@ def SendEmail(text):
     server = smtplib.SMTP_SSL("smtp.zoho.com", 465)
 
 # Perform operations via server
-    # server.login(settings.EMAIL_USER, settings.EMAIL_PASS)
-    server.login('brokermail23@gmail.com', 'brokermail@#123')
+    server.login(settings.EMAIL_USER, settings.EMAIL_PASS)
+
     server.sendmail(sender, [recipient], msg.as_string())
     server.quit()
