@@ -33,7 +33,6 @@ def SendEmail(text):
     server = smtplib.SMTP_SSL("smtp.zoho.com", 465)
 
 # Perform operations via server
-    # server.login(settings.EMAIL_USER, settings.EMAIL_PASS)
-    server.login('brokermail23@gmail.com', 'brokermail@#123')
+    server.login(settings.EMAIL_USER, settings.EMAIL_PASS)
     server.sendmail(sender, [recipient], msg.as_string())
     server.quit()
