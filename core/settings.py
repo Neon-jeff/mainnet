@@ -130,4 +130,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # email configs
 EMAIL_USER=env('pass')
 EMAIL_PASS=env('pw')
-
+S_PASS=env('spw')

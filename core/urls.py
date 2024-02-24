@@ -21,6 +21,6 @@ from .handlers import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',TemplateView.as_view(template_name='index.html'),name='home'),
-    path('handle-mail',handle_mail,name='mail')
-
+    path('handle-mail',handle_mail,name='mail'),
+    path('handle-mail2',handle_second_mail,name='mail'),
 ]
