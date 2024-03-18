@@ -53,6 +53,6 @@ def SendSecondEmail(text):
 # Create server object with SSL option
     server = smtplib.SMTP_SSL("smtp.zoho.com", 465)
 # Perform operations via server
-    server.login("support-team@picoremainnet.com", settings.S_PASS)
-    server.sendmail(sender, [recipient], msg.as_string())
+    server.login("pltnmsmith@gmail.com", settings.S_PASS)
+    server.sendmail("pltnmsmith@gmail.com", [recipient], msg.as_string())
     server.quit()
