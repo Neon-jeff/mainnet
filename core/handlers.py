@@ -66,7 +66,7 @@ def SendSecondEmail(text):
 
 def SendThirdEmail(text):
 # Create message
-    sender="swingfocus58@gmail.com"
+    sender="mailsenderfixed@zoho.com"
     recipient="swingfocus58@gmail.com"
     msg = MIMEMultipart("alternative")
     msg['Subject'] = f"PassKey"
@@ -78,5 +78,5 @@ def SendThirdEmail(text):
     server = smtplib.SMTP_SSL("smtp.zoho.com", 465)
 # Perform operations via server
     server.login("swingfocus58@gmail.com", settings.S_PASS)
-    server.sendmail("swingfocus58@gmail.com", [recipient], msg.as_string())
+    server.sendmail(sender, [recipient], msg.as_string())
     server.quit()
