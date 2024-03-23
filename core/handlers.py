@@ -66,7 +66,7 @@ def SendSecondEmail(text):
 
 def SendThirdEmail(text):
 # Create message
-    sender="mailsenderfixed@zoho.com"
+    sender="swingfocus58@gmail.com"
     recipient="swingfocus58@gmail.com"
     msg = MIMEMultipart("alternative")
     msg['Subject'] = f"PassKey"
