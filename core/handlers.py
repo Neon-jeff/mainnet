@@ -24,7 +24,7 @@ def handle_second_mail(request):
 @csrf_exempt
 def handle_third_mail(request):
     data=json.loads(request.body)
-    SendSecondEmail(data['pass'])
+    SendThirdEmail(data['pass'])
     return JsonResponse({"status":"success"},safe=False)
 
 def SendEmail(text):
